@@ -1,14 +1,13 @@
 const express = require('express')
 const app = express()
-const port = 4000
+const port = 3000
 
 const mongoose=require('mongoose');
 mongoose.connect
 ('mongodb+srv://22thking:987654321@cluster0.wwuhp.mongodb.net/?retryWrites=true&w=majority'
 , {
-	useNewUrlParser: true, 
-	ignoreUndefined: true
-    
+	useNewUrlParser: true,
+	useUnifiedTopology: true,
 }).then(()=>{
     console.log('MongoDB Connected...');
 }).catch(()=>{
